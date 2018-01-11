@@ -22,6 +22,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+// serve static libs
+app.use('/lib/semantic', express.static(path.join(__dirname, 'node_modules/semantic-ui-css')));
+app.use('/lib/jquery', express.static(path.join(__dirname, 'node_modules/jquery/dist')));
+
+// routing
 app.use('/', index);
 app.use('/users', users);
 
