@@ -1,22 +1,17 @@
 {
   "name": "linker",
-  "version": "1.0.0",
-  "description": "Link shortener for PirateNet",
-  "main": "index.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://git.piratenet.work/piratenet/linker.git"
-  },
-  "keywords": [
-    "link",
-    "shortener"
-  ],
-  "author": "Phonic Mouse",
-  "license": "Unlicense",
-  "devDependencies": {
-    "nodemon": "^1.14.11"
+  "dependencies": {
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "morgan": "~1.9.0",
+    "pug": "2.0.0-beta11",
+    "serve-favicon": "~2.4.5"
   }
 }
