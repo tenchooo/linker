@@ -1,5 +1,12 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  .pusher
+    .ui.inverted.vertical.masthead.center.aligned.segment.flexo
+      .ui.text.container
+        h1.ui.inverted.header
+          | Linker
+        h2 PirateNet's awesome link shortener
+        .ui.action.input.hundred
+          input(type='text', placeholder='e.g. https://git.piratenet.work/piratenet/linker')
+          button.ui.primary.button Shorten
