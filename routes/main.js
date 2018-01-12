@@ -14,8 +14,9 @@ router.get('/', function(req, res, next) {
 
 router.post('/shorten', function(req, res, next) {
   try {
-    var json = JSON.parse(req.body);
-    var link = json.link;
+    // var json = JSON.parse(req.body);
+    var json = req.body;
+    var url = json.url;
     var isUnique = false;
     while (isUnique == false) {
       var id = randomstring.generate({
@@ -23,17 +24,25 @@ router.post('/shorten', function(req, res, next) {
         charset: config.linker.charset
       });
       db.get(id, function(err, value) {
-        if (err) {
-          if (err.notFound) {
-            isUnique = true;
-          } else {
-            return;
-          }
+        if (err.notFound) {
+          isUnique = true;
+          db.put(id, {
+            url: url
+          }, function(err){
+            res.send({
+              error: false,
+              id: id
+            });
+          });
         }
       });
     }
   } catch (err) {
-    // return error json
+    res.send({
+      error: true,
+      message: 'this is a TODO error',
+      rawobj: err
+    });
   }
 });
 
