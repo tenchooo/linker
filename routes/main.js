@@ -1,10 +1,9 @@
 var express = require('express');
 var randomstring = require("randomstring");
 var db = require('../db');
+var config = require('../config');
 
 var router = express.Router();
-
-var config = require('../config');
 
 router.get('/', function(req, res, next) {
   res.render('index', {
@@ -27,12 +26,10 @@ router.post('/shorten', function(req, res, next) {
         if (err) {
           if (err.notFound) {
             isUnique = true;
+          } else {
+            return;
           }
-          // I/O or other error, pass it up the callback chain
-          return callback(err)
         }
-
-        // .. handle `value` here
       });
     }
   } catch (err) {
