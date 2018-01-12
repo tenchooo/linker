@@ -1,0 +1,8 @@
+{
+  "title": "Linker",
+  "slogan": "PirateNet's awesome URL shortener",
+  "linker": {
+    "length": 8,
+    "charset": "alphabetic"
+  }
+}
