@@ -8,8 +8,6 @@ var options = {
   valueEncoding: 'json'
 };
 
-// TODO: add json support when we'll make available other features such as private link, captcha or paste expiration.
-var db = level(dbPath);
-// var db = level(dbPath, options);
+var db = level(dbPath, options);
 
 module.exports = db;
