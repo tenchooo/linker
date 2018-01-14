@@ -1,3 +1,3 @@
-# linker
+# Linker
 
-Link shortener for PirateNet.
+Simple and modern link shortener for PirateNet.
