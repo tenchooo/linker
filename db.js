@@ -1,13 +1,13 @@
-var level = require('level');
-var path = require('path');
+var level = require('level')
+var path = require('path')
 
-var dbPath = process.env.DB_PATH || path.join(__dirname, 'data');
+var dbPath = process.env.DB_PATH || path.join(__dirname, 'data')
 
 var options = {
   keyEncoding: 'binary',
   valueEncoding: 'json'
-};
+}
 
-var db = level(dbPath, options);
+var db = level(dbPath, options)
 
-module.exports = db;
+module.exports = db
