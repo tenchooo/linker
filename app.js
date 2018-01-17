@@ -7,13 +7,20 @@ var bodyParser = require('body-parser')
 
 var main = require('./routes/main')
 
+var config = require('./config')
+
 var app = express()
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'pug')
 
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')))
+// serve favicon
+if (config.favicon.path.relative) {
+  app.use(favicon(path.join(__dirname, config.favicon.path.relative)))
+} else if (config.favicon.path.absolute) {
+  app.use(favicon(config.favicon.path.absolute))
+}
 app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))

@@ -1,6 +1,11 @@
 {
   "title": "Linker",
   "slogan": "PirateNet's awesome URL shortener",
+  "favicon": {
+    "path": {
+      "relative": "public/favicon.ico"
+    }
+  },
   "linker": {
     "length": 8,
     "charset": "alphabetic"
