@@ -31,3 +31,6 @@ npm-debug.log
 
 # LevelDB
 data
+
+# Package Lock
+package-lock.json
