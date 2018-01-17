@@ -30,7 +30,8 @@
     "pug": "2.0.0-beta11",
     "randomstring": "^1.1.5",
     "semantic-ui-css": "^2.2.12",
-    "serve-favicon": "~2.4.5"
+    "serve-favicon": "~2.4.5",
+    "valid-url": "^1.0.9"
   },
   "devDependencies": {
     "nodemon": "^1.14.11",

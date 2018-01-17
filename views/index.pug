@@ -3,10 +3,21 @@ extends layout
 block content
   .pusher
     .ui.inverted.vertical.masthead.center.aligned.segment.flexo
+      .ui.basic.modal.inverted
+        .ui.icon.header
+          i.linkify.icon
+        .content
+          h3.centered-modal
+            a(href="https://git.piratenet.work/piratenet")#mainlink https://git.piratenet.work/piratenet
+            |      has been mapped to     
+            a(href="https://linker.piratenet.work/XxYyZz")#shortlink https://linker.piratenet.work/XxYyZz
+        .actions
+          .ui.red.basic.cancel.inverted.button Close
+          .ui.green.ok.inverted.button Copy to Clipboard
       .ui.text.container
         h1.ui.inverted.header
           | #{title}
         h2 #{slogan}
         .ui.action.input.hundred
-          input(type='text', placeholder='e.g. https://git.piratenet.work/piratenet/linker' name='link')
-          button.ui.primary.button Shorten
+          input(type='text', placeholder='e.g. https://git.piratenet.work/piratenet/linker' name='link')#url
+          button.ui.primary.button#shorten Shorten
