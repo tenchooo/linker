@@ -34,7 +34,7 @@
     "valid-url": "^1.0.9"
   },
   "devDependencies": {
-    "nodemon": "^1.14.11",
+    "nodemon": "^2.0.3",
     "standard": "*"
   }
 }
