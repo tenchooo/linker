@@ -27,7 +27,7 @@
     "jquery": "^3.2.1",
     "level": "^2.1.1",
     "morgan": "~1.10.0",
-    "pug": "2.0.4",
+    "pug": "3.0.0",
     "randomstring": "^1.1.5",
     "semantic-ui-css": "^2.2.12",
     "serve-favicon": "~2.5.0",
